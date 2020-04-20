@@ -1,0 +1,193 @@
+<div name="exerciseTage">
+    <span class="debugIndex" style="">
+                                    [$exercise.exerciseId --$exercise.exerciseTypeId]
+        </span>
+    #if($!{exercise.exerciseSource})
+    
+    #end
+    ## 分析ExerciseTypeName，后台在context中设置一个boolean变量，用以判断是否显示小问
+    #analyseExerciseType(${exercise.exerciseTypeId})
+        #set($addleft=30)
+        #if($isHfErrorAndError)
+            #set($addleft=30)
+        #end
+        #set($questionChoseMarginLeft=$addleft + 15)
+        #set($questionMarginLeft=$addleft + 0)
+        #set($subQuestionMarginLeft=$addleft + 15)
+        #if($!{exercise.exerciseContent} && $!{exercise.exerciseContent}!='')
+            <div class="qitem_content" name='exercise_stem' style="#changeFontFamily($subjectId,$exercise.exerciseTypeId)">
+                #set($showIndex=$prefixExeIndex + $exercise.index)
+                #if($isHfErrorAndError==true && $exercise.error==true)
+                    #set($exercise.error=false)
+                    #imgTransfer($showIndex,$exercise.exerciseContent,'',$exercise.exerciseId,-1,"exeContent_errorIcon", $subjectId,"",$exercise.exerciseTypeId,$exercise.exerciseTypeName)
+                #else
+                    #imgTransfer($showIndex,$exercise.exerciseContent,'',$exercise.exerciseId,-1,"exeContent", $subjectId,${exercise.difficultyDegreeName},$exercise.exerciseTypeId,$exercise.exerciseTypeName)
+                #end
+                #set($prefixExeIndex="")
+            </div>
+            #set($questionMarginLeft=$addleft + 25)
+            #set($questionChoseMarginLeft=$addleft + 40)
+            #set($subQuestionMarginLeft=$addleft + 40)
+        #end
+    
+    ## 完形填空7选5不显示小问
+    
+    #if(!$avoidQuestion)
+    
+        #set($showAnswerQuestionSize=${exercise.exerciseQuestionList.size()})
+    
+        #foreach($question in ${exercise.exerciseQuestionList})
+            #set($questionId=$!{exercise.topicAnalysises.get($velocityCount).answers[0].questionId})
+        ## 小问是否 没有 题干
+            #set($questinIndexWarpper="")
+            #set($questionNoTitle=(!$!{question.questionContent} || $!{question.questionContent}==''))
+            #if(!$questionNoTitle)
+                <div class="qitem_title" name='question_content' style="margin-left:${questionMarginLeft}px;">
+                    ## 大题题干为空：多个小问，第一个小问显示大题题干；一个小问，不显示小问题号
+                    #if((!$!{exercise.exerciseContent} || $!{exercise.exerciseContent}==''))
+                        #if($velocityCount<1 && ${exercise.exerciseQuestionList.size()}>1)
+                            #set($questinIndexWarpper=$prefixExeIndex + ${exercise.index}+""+'('+$question.questionIndex+')')
+                            #set($prefixExeIndex="")
+                        #elseif(${exercise.exerciseQuestionList.size()}<2)
+                            #set($questinIndexWarpper=$prefixExeIndex + $!{exercise.index})
+                            #set($prefixExeIndex="")
+                        #else
+                            #set($questinIndexWarpper='('+$question.questionIndex+')')
+                        #end
+                    #else
+                        #if(${exercise.exerciseQuestionList.size()}>1)
+                            #set($questinIndexWarpper='('+$question.questionIndex+')')
+                        #end
+                    #end
+    
+                    #set($loseRate='')
+                    ## 多个小问 && (英语阅读理解 || 语文不是作文 || 语文不是语言文字运用 || 语文是语言文字运用但不是单选多选填空 || 数学选做题下的单选 || 数学解答)
+                    #if($!{exercise.exerciseQuestionList.size()}>1 && (  ($subjectId==3 && $exercise.exerciseTypeId==10230351)
+                    ||($subjectId==2 && $exercise.exerciseTypeId==10230362 && $question.questionType==1)
+                    ||($subjectId==2 && $question.questionType==6)
+                    ))
+                        #set($loseRate=$!{question.losingRate})
+                    #end
+                    #if(($velocityCount<1 && $isHfErrorAndError==true && $exercise.error==true))
+                        #imgTransfer($questinIndexWarpper,$question.questionContent,$!loseRate,$exercise.exerciseId,$!{questionId},"quesContent_errorIcon",$subjectId)
+                    #else
+                        #if($velocityCount==0 && (!$!{exercise.exerciseContent} || $!{exercise.exerciseContent}==''))
+                            #imgTransfer($questinIndexWarpper,$question.questionContent,$!loseRate,$exercise.exerciseId,$!{questionId},"quesContent",$subjectId,${exercise.difficultyDegreeName})
+                        #else
+                            #imgTransfer($questinIndexWarpper,$question.questionContent,$!loseRate,$exercise.exerciseId,$!{questionId},"quesContent",$subjectId)
+                        #end
+                    #end
+                         ## 除单选、多选、填空、写作、微写作之外，其他的小问题型要加答题区，答题区最少8行,需要9个<br>
+                </div>
+    
+                #set($showAnswerQuestion=$question)
+                #set($showAnswerQuestionIndex=$velocityCount)
+                #parse("union/exeTypeShowAnswerArea.vm")
+    
+                ##遍历选项
+                #if($!question.option && $!{question.option.size()}>0)
+                    <div name='question_option' class="optionContainerWidth" style="margin-left: ${questionChoseMarginLeft}px;">
+                        #eBookOptionGroupCal($!{question.option},'1',$subjectId,$exercise.exerciseId,$!{questionId})
+                    </div>
+                #end
+            #else
+                ##遍历选项
+                <div name='question_option' class="optionContainerWidth" style="margin-left: 30px;">
+                    <dl class="qitem_notitle_choose">
+                        <dt>#if($!{exercise.exerciseQuestionList.size()}>1&&$!{question.option.size()}>0)(${question.questionIndex})#end</dt>
+                        #eBookOptionCal($!{question.option},'2',$subjectId,$exercise.exerciseId,$!{questionId})
+                    </dl>
+                </div>
+            #end
+    
+        ## 没有小小问的情况
+            #if(!$!{question.subQuestions} || $!{question.subQuestions.size()}==0)
+    
+            ## 有小小问的情况
+            #else
+    
+            ## 当前小小问的答案解析
+                #set($currentSubTopicAnalysises=$!{exercise.topicAnalysises.get($velocityCount).subTopicAnalysises})
+    
+                #set($showIndex="")
+            ##                            大题小问都为空，第一个小小问显示大题题号
+                #if($!{velocityCount}<1 && (!$!{exercise.exerciseContent} || $!{exercise.exerciseContent}=='')&&(!$!{question.questionContent} || $!{question.questionContent}==''))
+                    #set($showIndex=$prefixExeIndex + $!{exercise.index})
+                    #set($prefixExeIndex="")
+                #end
+    
+                #if(!$!{question.questionContent} || $!{question.questionContent}=='')
+                    #set($showIndex=$!{showIndex}+""+'('+$!{question.questionIndex}+')')
+                #end
+    
+                #foreach($subQuestion in ${question.subQuestions})
+                    #set($questionId=$!{currentSubTopicAnalysises.get($velocityCount).answers[0].questionId})
+                    #set($subQuestionNoTitle=(!$!{subQuestion.questionContent} || $!{subQuestion.questionContent}==''))
+                    #if(!$subQuestionNoTitle)
+                        <div class="qitem_title" name='question_content' style="margin-left:${subQuestionMarginLeft}px;">
+                            ## 只有一个小问，而且有大题题干
+                            #set($questinIndexWarpper='')
+                            #if($subQuestion.questionIndex==1)
+                                #set($questinIndexWarpper='①')
+                            #elseif($subQuestion.questionIndex==2)
+                                #set($questinIndexWarpper='②')
+                            #elseif($subQuestion.questionIndex==3)
+                                #set($questinIndexWarpper='③')
+                            #elseif($subQuestion.questionIndex==4)
+                                #set($questinIndexWarpper='④')
+                            #elseif($subQuestion.questionIndex==5)
+                                #set($questinIndexWarpper='⑤')
+                            #elseif($subQuestion.questionIndex==6)
+                                #set($questinIndexWarpper='⑥')
+                            #elseif($subQuestion.questionIndex==7)
+                                #set($questinIndexWarpper='⑦')
+                            #elseif($subQuestion.questionIndex==8)
+                                #set($questinIndexWarpper='⑧')
+                            #elseif($subQuestion.questionIndex==9)
+                                #set($questinIndexWarpper='⑨')
+                            #elseif($subQuestion.questionIndex==10)
+                                #set($questinIndexWarpper='⑩')
+                            #else
+                                #set($questinIndexWarpper=$subQuestion.questionIndex)
+                            #end
+                            #if($velocityCount<1)
+                                #set($questinIndexWarpper=$!{showIndex}+""+${questinIndexWarpper})
+                            #end
+                                 #set($loseRate='')
+    
+                            ## 多个小问 && (英语阅读理解 || 语文不是作文 || 语文不是语言文字运用 || 语文是语言文字运用但不是单选多选填空 || 数学选做题下的单选 || 数学解答)
+                            #if($!{question.subQuestions.size()}>1 && (($subjectId==3 && $exercise.exerciseTypeId==10230351)
+                                ||($subjectId==2 && $exercise.exerciseTypeId==10230362 && $subQuestion.questionType==1)
+                                ||($subjectId==2 && $subQuestion.questionType==6)
+                                ))
+                                #set($loseRate=$!{subQuestion.losingRate})
+                            #end
+                            #imgTransfer($questinIndexWarpper,$subQuestion.questionContent,$!loseRate,$exercise.exerciseId,$!{questionId},"quesContent",$subjectId)
+                        </div>
+    
+                        #set($showAnswerQuestion=$subQuestion)
+                        #set($showAnswerQuestionIndex=$velocityCount)
+                        #parse("union/exeTypeShowAnswerArea.vm")
+    
+                        <div name='question_option' id='$!questionId' class="optionContainerWidth" style="margin-left: ${questionChoseMarginLeft}px;">
+                        ##遍历选项
+                            #if($!subQuestion.option&&$!{subQuestion.option.size()}>0)
+                                #eBookOptionGroupCal($!{subQuestion.option},'1',$subjectId,$exercise.exerciseId,$subQuestion.questionId)
+                            #end
+                        </div>
+                    #else
+                    ##遍历选项
+                        #if($!subQuestion.option&&$!{subQuestion.option.size()}>0)
+                            <div name='question_option' id='$!questionId' class="optionContainerWidth">
+                                <dl class="qitem_notitle_choose">
+                                    <dt>#if($!{question.subQuestions.size()}>1&&$!{subQuestion.option.size()}>0)(${subQuestion.questionIndex})#end</dt>
+                                    #eBookOptionCal($!{subQuestion.option},'2',$subjectId,$exercise.exerciseId,$subQuestion.questionId)
+                                </dl>
+                            </div>
+                        #end
+                    #end
+                #end
+            #end
+        #end
+    #end
+    </div>

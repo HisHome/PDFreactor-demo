@@ -1,0 +1,262 @@
+[{
+    "exerciseId": "324495829442240512",
+    "content": "<p>阅读下面的文字，完成下列问题。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;文化遗产包括物质文化遗产和非物质文化遗产，而博物馆是文化遗产的收藏地。在一般人的印象中，博物馆是以“物”的形式存在，但实际上，身为社会文化机构的博物馆在非遗的保护上<span style=\"text-decoration: underline;\"><span style=\"text-decoration: underline;\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>&nbsp;</span>。不仅<span style=\"text-decoration: underline;\">博物馆收藏文物在于这些藏品反映了它们所处历史时代的社会意识、审美意识等，更在于它们本身固有的特征、文化传统</span>。文物与大众亲密接触才能实现其价值，博物馆的使命就是让这些遗产的价值<span style=\"text-decoration: underline;\"><span style=\"text-decoration: underline;\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>&nbsp;</span>。其实，从诞生之初，非遗就在千百年的创造、生产、传承之中，通过“走市场”的方式流传至今，“活”在人们的衣食住行里，适应新的生存和发展空间的需求，催促着创新的发生。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;创新没有标准答案，勇于尝试，有所突破，都值得肯定。（ &nbsp; &nbsp;）因此，无论何种做法必须以保护为基础，在保护非物质文化遗产的过程中，要<span style=\"text-decoration: underline;\"><span style=\"text-decoration: underline;\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>&nbsp;</span>，而不是令人<span style=\"text-decoration: underline;\"><span style=\"text-decoration: underline;\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>&nbsp;</span>，甚至任性妄为的创新，这样才能探索出一条适合的保护之路。</p>",
+    "difficultyDegreeCode": 3,
+    "applicableGradeMap": {
+        "10": "高一",
+        "11": "高二",
+        "12": "高三"
+    },
+    "qualityCode": 0,
+    "question": [{
+            "questionId": "324495829832310784",
+            "questionTypeId": "1918",
+            "questionTypeName": "单选题",
+            "questionTypeCode": 1,
+            "hasQuestionContent": true,
+            "allowEnlarge": false,
+            "content": "<p>依次填入文中横线上的词语，全都恰当的一项是（ &nbsp; &nbsp;）</p>",
+            "knowledgeLevelCode": 2,
+            "knowledgeLevelName": "理解",
+            "knowledgeTypeCode": 1,
+            "knowledgeTypeName": "事实性",
+            "index": 1,
+            "leaf": true,
+            "knowledge": [{
+                "knowledgeId": "10237762",
+                "knowledgeName": "正确使用词语（包括成语、熟语）",
+                "main": true
+            }],
+            "option": [{
+                    "content": "<p>责无旁贷&nbsp;&nbsp;&nbsp;&nbsp;发扬蹈厉&nbsp;&nbsp;&nbsp;&nbsp;博采众长&nbsp;&nbsp;&nbsp;&nbsp;目不暇接</p>",
+                    "index": 1
+                },
+                {
+                    "content": "<p>在所不辞&nbsp;&nbsp;&nbsp;&nbsp;发扬光大&nbsp;&nbsp;&nbsp;&nbsp;兼容并蓄&nbsp;&nbsp;&nbsp;&nbsp;目不暇接</p>",
+                    "index": 2
+                },
+                {
+                    "content": "<p>责无旁贷&nbsp;&nbsp;&nbsp;&nbsp;发扬光大&nbsp;&nbsp;&nbsp;&nbsp;博采众长&nbsp;&nbsp;&nbsp;&nbsp;眼花缭乱</p>",
+                    "index": 3
+                },
+                {
+                    "content": "<p>在所不辞&nbsp;&nbsp;&nbsp;&nbsp;发扬蹈厉&nbsp;&nbsp;&nbsp;&nbsp;兼容并蓄&nbsp;&nbsp;&nbsp;&nbsp;眼花缭乱</p>",
+                    "index": 4
+                }
+            ],
+            "answer": {
+                "hasAnswer": true,
+                "answer": "C",
+                "hasExplain": true,
+                "explain": "<p>责无旁贷：自己的责任不能推卸给别人；在所不辞：决不推辞（多用在冒险犯难）。</p> <p>发扬光大：发展提倡，使日益盛大；发扬蹈厉：意气昂扬，精神奋发。</p> <p>兼容并蓄：把不同内容、不同性质的东西收下来，保存起来；博采众长：广泛地采纳各家的长处。</p> <p>眼花缭乱：形容眼睛看见复杂纷繁的东西而感到迷乱，比喻事物复杂，无法辨清；目不暇接：形容东西多，来不及观看或看不过来，故选C。</p>"
+            }
+        },
+        {
+            "questionId": "324495829840699392",
+            "questionTypeId": "1918",
+            "questionTypeName": "单选题",
+            "questionTypeCode": 1,
+            "hasQuestionContent": true,
+            "allowEnlarge": false,
+            "content": "<p>下面填入文中括号内的语句，衔接最恰当的一项是（ &nbsp; &nbsp;）</p>",
+            "knowledgeLevelCode": 2,
+            "knowledgeLevelName": "理解",
+            "knowledgeTypeCode": 1,
+            "knowledgeTypeName": "事实性",
+            "index": 2,
+            "leaf": true,
+            "knowledge": [{
+                "knowledgeId": "10245282",
+                "knowledgeName": "准确连贯",
+                "main": true
+            }],
+            "option": [{
+                    "content": "<p>但是，有些新技术在给游客体验非遗的魅力带来便利的同时，也引发了一些遗产保护方面的担忧。</p>",
+                    "index": 1
+                },
+                {
+                    "content": "<p>但是，有些新技术引发了一些遗产保护方面的担忧，虽然给游客体验非遗的魅力带来了便利。</p>",
+                    "index": 2
+                },
+                {
+                    "content": "<p>然而，游客在享受新技术带来的非遗魅力便利体验的同时，也引发了一些遗产保护的担忧。</p>",
+                    "index": 3
+                },
+                {
+                    "content": "<p>诚然，有些新技术引发了一些遗产保护方面的担忧，但是给游客体验非遗的魅力带来便利。</p>",
+                    "index": 4
+                }
+            ],
+            "answer": {
+                "hasAnswer": true,
+                "answer": "A",
+                "hasExplain": true,
+                "explain": "<p>由上句来看，在说“创新”，由下句来看，在谈做法以“保护”为主，因此括号里先说“新技术”再说“保护”，这样与上文衔接才更紧密，故选A。</p>"
+            }
+        },
+        {
+            "questionId": "324495829844893696",
+            "questionTypeId": "1918",
+            "questionTypeName": "单选题",
+            "questionTypeCode": 1,
+            "hasQuestionContent": true,
+            "allowEnlarge": false,
+            "content": "<p>文中画横线的句子有语病，下列修改最恰当的一项是（ &nbsp; &nbsp;）</p>",
+            "knowledgeLevelCode": 2,
+            "knowledgeLevelName": "理解",
+            "knowledgeTypeCode": 1,
+            "knowledgeTypeName": "事实性",
+            "index": 3,
+            "leaf": true,
+            "knowledge": [{
+                "knowledgeId": "10237782",
+                "knowledgeName": "辨析并修改病句",
+                "main": true
+            }],
+            "option": [{
+                    "content": "<p>博物馆收藏文物不仅在于这些藏品反映了它们所处历史时代的社会意识、审美意识、文化传统等，更在于在于它们本身固有的特征。</p>",
+                    "index": 1
+                },
+                {
+                    "content": "<p>不仅博物馆收藏文物在于它们本身固有的特征，更在于这些藏品反映了它们所处历史时代的社会意识、审美意识、文化传统等。</p>",
+                    "index": 2
+                },
+                {
+                    "content": "<p>博物馆收藏文物不仅在于它们本身固有的特征，更在于这些藏品反映了它们所处历史时代的社会意识、审美意识、文化传统等。</p>",
+                    "index": 3
+                },
+                {
+                    "content": "<p>博物馆收藏文物不仅在于它们本身固有的特征、文化传统，更在于这些藏品对它们所处历史时代的社会意识、审美意识等进行了反映。</p>",
+                    "index": 4
+                }
+            ],
+            "answer": {
+                "hasAnswer": true,
+                "answer": "C",
+                "hasExplain": true,
+                "explain": "<p>原句有以下几处错误，关联词语“不仅”位置错误，应放在“博物馆收藏文物”之后；“文化传统”位置错误，应跟在“社会意识、审美意识”之后，这都是精神文化上的表现；整个句子语序颠倒，应该“固有特征”在前，“社会意识、审美意识、文化传统”在。所以答案为C。</p>"
+            }
+        }
+    ],
+    "educationStageCode": 1,
+    "educationStageName": "高中",
+    "subjectCode": 1,
+    "subjectName": "语文",
+    "exerciseTypeId": "10002626",
+    "exerciseTypeCode": 101,
+    "exerciseTypeName": "语言文字运用",
+    "exerciseTypeDesc": "语文基础知识和文字运用",
+    "hasExerciseContent": true,
+    "difficultyDegreeName": "一般",
+    "qualityName": "高"
+},
+{
+    "exerciseId": "324495829442240512",
+    "content": "<p>阅读下面的文字，完成下列问题。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;文化遗产包括物质文化遗产和非物质文化遗产，而博物馆是文化遗产的收藏地。在一般人的印象中，博物馆是以“物”的形式存在，但实际上，身为社会文化机构的博物馆在非遗的保护上<span style=\"text-decoration: underline;\"><span style=\"text-decoration: underline;\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>&nbsp;</span>。不仅<span style=\"text-decoration: underline;\">博物馆收藏文物在于这些藏品反映了它们所处历史时代的社会意识、审美意识等，更在于它们本身固有的特征、文化传统</span>。文物与大众亲密接触才能实现其价值，博物馆的使命就是让这些遗产的价值<span style=\"text-decoration: underline;\"><span style=\"text-decoration: underline;\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>&nbsp;</span>。其实，从诞生之初，非遗就在千百年的创造、生产、传承之中，通过“走市场”的方式流传至今，“活”在人们的衣食住行里，适应新的生存和发展空间的需求，催促着创新的发生。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;创新没有标准答案，勇于尝试，有所突破，都值得肯定。（ &nbsp; &nbsp;）因此，无论何种做法必须以保护为基础，在保护非物质文化遗产的过程中，要<span style=\"text-decoration: underline;\"><span style=\"text-decoration: underline;\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>&nbsp;</span>，而不是令人<span style=\"text-decoration: underline;\"><span style=\"text-decoration: underline;\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>&nbsp;</span>，甚至任性妄为的创新，这样才能探索出一条适合的保护之路。</p>",
+    "difficultyDegreeCode": 3,
+    "applicableGradeMap": {
+        "10": "高一",
+        "11": "高二",
+        "12": "高三"
+    },
+    "qualityCode": 0,
+    "question": [{
+            "questionId": "324495829832310784",
+            "questionTypeId": "1918",
+            "questionTypeName": "单选题",
+            "questionTypeCode": 1,
+            "hasQuestionContent": true,
+            "allowEnlarge": false,
+            "content": "<p>依次填入文中横线上的词语，全都恰当的一项是（ &nbsp; &nbsp;）</p>",
+            "knowledgeLevelCode": 2,
+            "knowledgeLevelName": "理解",
+            "knowledgeTypeCode": 1,
+            "knowledgeTypeName": "事实性",
+            "index": 1,
+            "leaf": true,
+            "knowledge": [{
+                "knowledgeId": "10237762",
+                "knowledgeName": "正确使用词语（包括成语、熟语）",
+                "main": true
+            }],
+            "option": [{
+                    "content": "<p>责无旁贷&nbsp;&nbsp;&nbsp;&nbsp;发扬蹈厉&nbsp;&nbsp;&nbsp;&nbsp;博采众长&nbsp;&nbsp;&nbsp;&nbsp;目不暇接</p>",
+                    "index": 1
+                },
+                {
+                    "content": "<p>在所不辞&nbsp;&nbsp;&nbsp;&nbsp;发扬光大&nbsp;&nbsp;&nbsp;&nbsp;兼容并蓄&nbsp;&nbsp;&nbsp;&nbsp;目不暇接</p>",
+                    "index": 2
+                },
+                {
+                    "content": "<p>责无旁贷&nbsp;&nbsp;&nbsp;&nbsp;发扬光大&nbsp;&nbsp;&nbsp;&nbsp;博采众长&nbsp;&nbsp;&nbsp;&nbsp;眼花缭乱</p>",
+                    "index": 3
+                },
+                {
+                    "content": "<p>在所不辞&nbsp;&nbsp;&nbsp;&nbsp;发扬蹈厉&nbsp;&nbsp;&nbsp;&nbsp;兼容并蓄&nbsp;&nbsp;&nbsp;&nbsp;眼花缭乱</p>",
+                    "index": 4
+                }
+            ],
+            "answer": {
+                "hasAnswer": true,
+                "answer": "C",
+                "hasExplain": true,
+                "explain": "<p>责无旁贷：自己的责任不能推卸给别人；在所不辞：决不推辞（多用在冒险犯难）。</p> <p>发扬光大：发展提倡，使日益盛大；发扬蹈厉：意气昂扬，精神奋发。</p> <p>兼容并蓄：把不同内容、不同性质的东西收下来，保存起来；博采众长：广泛地采纳各家的长处。</p> <p>眼花缭乱：形容眼睛看见复杂纷繁的东西而感到迷乱，比喻事物复杂，无法辨清；目不暇接：形容东西多，来不及观看或看不过来，故选C。</p>"
+            }
+        },
+        {
+            "questionId": "324495829840699392",
+            "questionTypeId": "1918",
+            "questionTypeName": "单选题",
+            "questionTypeCode": 1,
+            "hasQuestionContent": true,
+            "allowEnlarge": false,
+            "content": "<p>下面填入文中括号内的语句，衔接最恰当的一项是（ &nbsp; &nbsp;）</p>",
+            "knowledgeLevelCode": 2,
+            "knowledgeLevelName": "理解",
+            "knowledgeTypeCode": 1,
+            "knowledgeTypeName": "事实性",
+            "index": 2,
+            "leaf": true,
+            "knowledge": [{
+                "knowledgeId": "10245282",
+                "knowledgeName": "准确连贯",
+                "main": true
+            }],
+            "option": [{
+                    "content": "<p>但是，有些新技术在给游客体验非遗的魅力带来便利的同时，也引发了一些遗产保护方面的担忧。</p>",
+                    "index": 1
+                },
+                {
+                    "content": "<p>但是，有些新技术引发了一些遗产保护方面的担忧，虽然给游客体验非遗的魅力带来了便利。</p>",
+                    "index": 2
+                },
+                {
+                    "content": "<p>然而，游客在享受新技术带来的非遗魅力便利体验的同时，也引发了一些遗产保护的担忧。</p>",
+                    "index": 3
+                },
+                {
+                    "content": "<p>诚然，有些新技术引发了一些遗产保护方面的担忧，但是给游客体验非遗的魅力带来便利。</p>",
+                    "index": 4
+                }
+            ],
+            "answer": {
+                "hasAnswer": true,
+                "answer": "A",
+                "hasExplain": true,
+                "explain": "<p>由上句来看，在说“创新”，由下句来看，在谈做法以“保护”为主，因此括号里先说“新技术”再说“保护”，这样与上文衔接才更紧密，故选A。</p>"
+            }
+        }
+    ],
+    "educationStageCode": 1,
+    "educationStageName": "高中",
+    "subjectCode": 1,
+    "subjectName": "语文",
+    "exerciseTypeId": "10002626",
+    "exerciseTypeCode": 101,
+    "exerciseTypeName": "语言文字运用",
+    "exerciseTypeDesc": "语文基础知识和文字运用",
+    "hasExerciseContent": true,
+    "difficultyDegreeName": "一般",
+    "qualityName": "高"
+}
+]

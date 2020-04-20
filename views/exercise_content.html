@@ -1,0 +1,67 @@
+<div name="exerciseTage">
+    <div class="qitem_content">
+        {{if content}}
+            <!-- <span class="exercise_index">{{eindex}}.</span> -->
+            <div style="text-indent: 10px;">
+                {{@content}}
+            </div>
+        {{/if}}
+        {{if question&&question.length>0}}
+            {{each question item index}}
+                <!-- 小问 -->
+                <!-- 英语七选五 等不显示小问内容 -->
+                {{if exerciseTypeId!=10230351}}
+                    <div class="qitem_question">
+                        <span class="exercise_index">（{{index+1}}）</span>
+                        <div >
+                            {{@item.content}}
+                        </div>
+                    </div>
+                    <!-- 遍历选项 -->
+                    {{if item.option&&item.option.length}}
+                        <div class="option_box">
+                            {{each item.option option sindex}}
+                                <div class="option_content">
+                                    <span class="option_name">{{['','A','B','C','D'][option.index]}}.</span>
+                                    <div style="text-indent: 4px;">
+                                        {{@option.content}}
+                                    </div>
+                                </div>
+                            {{/each}}
+                        </div>
+                    {{/if}}
+                {{/if}}
+                <!-- 小小问 -->
+                {{if item.question&&item.question.length}}
+                    {{each item.question samllquestion sindex}}
+                        <div class="qitem_question">
+                            <span class="exercise_index">（{{index+1}}-{{sindex+1}}）</span>
+                            <div >
+                                {{@samllquestion.content}}
+                            </div>
+                        </div>
+                        <!-- 遍历选项 -->
+                        {{if samllquestion.option&&samllquestion.option.length}}
+                            <div class="option_box">
+                                {{each samllquestion.option option sindex}}
+                                    <div class="option_content">
+                                        <span class="option_name">{{['','A','B','C','D'][option.index]}}.</span>
+                                        <div style="text-indent: 4px;">
+                                            {{@option.content}}
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        {{/if}}
+                    {{/each}}
+                {{/if}}
+                <div class="height8"></div>
+
+            {{/each}}
+        {{/if}}
+    </div>
+</div>
+
+
+
+    
