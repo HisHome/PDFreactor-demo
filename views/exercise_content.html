@@ -2,9 +2,11 @@
     <div class="qitem_content">
         {{if content}}
             <!-- <span class="exercise_index">{{eindex}}.</span> -->
-            <div style="text-indent: 10px;">
-                {{@content}}
+            <!-- 题目内容给 -->
+            <div>
+                <p>{{@content}}</p>
             </div>
+            <div class="height6"></div>
         {{/if}}
         {{if question&&question.length>0}}
             {{each question item index}}
@@ -13,50 +15,70 @@
                 {{if exerciseTypeId!=10230351}}
                     <div class="qitem_question">
                         <span class="exercise_index">（{{index+1}}）</span>
-                        <div >
-                            {{@item.content}}
-                        </div>
-                    </div>
-                    <!-- 遍历选项 -->
-                    {{if item.option&&item.option.length}}
-                        <div class="option_box">
-                            {{each item.option option sindex}}
-                                <div class="option_content">
-                                    <span class="option_name">{{['','A','B','C','D'][option.index]}}.</span>
-                                    <div style="text-indent: 4px;">
-                                        {{@option.content}}
-                                    </div>
-                                </div>
-                            {{/each}}
-                        </div>
-                    {{/if}}
-                {{/if}}
-                <!-- 小小问 -->
-                {{if item.question&&item.question.length}}
-                    {{each item.question samllquestion sindex}}
-                        <div class="qitem_question">
-                            <span class="exercise_index">（{{index+1}}-{{sindex+1}}）</span>
-                            <div >
-                                {{@samllquestion.content}}
-                            </div>
-                        </div>
-                        <!-- 遍历选项 -->
-                        {{if samllquestion.option&&samllquestion.option.length}}
-                            <div class="option_box">
-                                {{each samllquestion.option option sindex}}
-                                    <div class="option_content">
-                                        <span class="option_name">{{['','A','B','C','D'][option.index]}}.</span>
-                                        <div style="text-indent: 4px;">
-                                            {{@option.content}}
-                                        </div>
-                                    </div>
-                                {{/each}}
-                            </div>
-                        {{/if}}
-                    {{/each}}
-                {{/if}}
-                <div class="height8"></div>
+                        <div style="padding-left: 28px;">
+                            <!-- 小问内筒 -->
+                            <div><p> {{@item.content}} </p></div>
 
+                            <div class='qitem_title'>
+                                <p>
+                                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                                </p>
+                            </div>
+
+                             <!-- 小问选项 -->
+                            {{if item.option&&item.option.length}}
+                                <div class="option_box">
+                                    {{each item.option option sindex}}
+                                        <div class="option_content breakAvoid" style="float: left;width:100%;">
+                                            <div style="padding-left: 16px;">
+                                                <span class="option_name">{{['','A','B','C','D'][option.index]}}.</span>
+                                                <p>{{@option.content}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearFix"></div>
+                                    {{/each}}
+                                </div>
+                            {{/if}}
+                        </div>      
+                            <!-- 小小问 -->
+                            {{if item.question&&item.question.length}}
+                                    {{each item.question samllquestion sindex}}
+                                        <div class="qitem_question">
+                                            <span class="exercise_index">（{{index+1}}-{{sindex+1}}）</span>
+                                            <div style="padding-left: 28px;">
+                                                <!-- 小小问内筒 -->
+                                                <div>
+                                                    <p>{{@samllquestion.content}}</p>
+                                                </div>
+                                                <div class='qitem_title'>
+                                                    <p>
+                                                        <br/><br/><br/><br/><br/><br/><br/><br/>
+                                                    </p>
+                                                </div>
+                                                <!-- 小小问选项 -->
+                                                {{if samllquestion.option&&samllquestion.option.length}}
+                                                    <div class="option_box">
+                                                        {{each samllquestion.option option sindex}}
+                                                            <div class="option_content breakAvoid" style="float: left;width:100%;">
+                                                                <div style="padding-left: 16px;">
+                                                                    <span class="option_name">{{['','A','B','C','D'][option.index]}}.</span>
+                                                                    <p>{{@option.content}}</p>
+                                                                </div>
+                                                            </div>
+                                                        <div class="clearFix"></div>
+                                                        {{/each}}
+                                                    </div>
+                                                {{/if}}
+                                            </div>
+                                        </div>
+                                        <div class="height6"></div>
+                                    {{/each}}
+                            {{/if}}
+
+                    </div>
+                   
+                {{/if}}
+                <div class="height6"></div>
             {{/each}}
         {{/if}}
     </div>

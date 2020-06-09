@@ -14,8 +14,9 @@ var config = {
 };
 
 router.get('/', async (ctx, next) => {
-    let tmp = fs.readFileSync(path.resolve(__dirname, '../views/new.html'), 'utf-8')
-    // let tmp = template(path.resolve(__dirname, '../views/tmp.html'), {exercieData})
+    // let tmp = fs.readFileSync(path.resolve(__dirname, '../views/new.html'), 'utf-8')
+    // let tmp = template(path.resolve(__dirname, '../views/tmp.html'), {exercieData, arr:[1,2,3]})
+    let tmp = template(path.resolve(__dirname, '../views/studentTmp.html'), {exercieData, arr:[1,2,3]})
     // let tmp = template(path.resolve(__dirname, '../views/new.html'), {exercieData})
     console.log('tmp')
     config.document = tmp
@@ -38,7 +39,12 @@ router.get('/', async (ctx, next) => {
 })
 router.get('/html', async (ctx, next) => {
     // let tmp = fs.readFileSync(path.resolve(__dirname, '../views/tmp.html'), 'utf-8')
-    let tmp = template(path.resolve(__dirname, '../views/tmp.html'), {exercieData})
+    let tmp = template(path.resolve(__dirname, '../views/studentTmp.html'), {exercieData, arr:[1,2,3]})
+    fs.writeFile('result.html', tmp, 'utf-8', function(error) {
+        if (error) {
+            console.log(error);
+        }
+    });
     ctx.body= tmp
 })
 router.get('/pdf', async (ctx, next) => {

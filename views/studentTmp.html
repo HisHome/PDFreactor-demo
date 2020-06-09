@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>精选错题-举一反三</title>
+    <style>
+        /* @font-face {
+            font-family: "Adobe Kaiti Std";
+            src: url('/work/p/jdk/default/jre/lib/fonts/ADOBEKAITISTD-REGULAR.OTF');
+        } */
+
+        div {
+            display: block;
+            position: relative;
+        }
+        p {
+            margin: 0 auto;
+            line-height: 21px;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+        table.ht_table td,
+        table.ht_table th {
+            /*padding: 5px 10px;*/
+            border: 1px solid black !important;
+            line-height: normal;
+            display: table-cell;
+            word-wrap: break-word;
+            word-break: break-all;
+            width: auto !important;
+        }
+
+        table.ht_table td img,
+        table.ht_table th img {
+
+            max-width: none !important;
+        }
+
+        table.ht_table {
+            margin-bottom: 10px;
+            border-collapse: collapse;
+            display: table;
+            /*page-break-inside: avoid;*/
+            /*border-spacing: 2px;*/
+            border-color: grey;
+            width: auto !important;
+
+        }
+
+        table.ht_table thead {
+
+            display: table-row-group;
+        }
+
+        table.ht_table tr {
+            page-break-inside: avoid;
+        }
+
+        table.ht_table tr td p {
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        table.ht_table td p,
+        table.ht_table th p {
+            text-align: inherit;
+        }
+
+        table.clear_border,
+        table.clear_border td,
+        table.clear_border th {
+            border: none !important;
+        }
+
+        .txt-wave {
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAGJAu9tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjc0NzYzOURERjI5NTExRTZBNjk2QkQ1OEYzQkZCMDM3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjc0NzYzOURFRjI5NTExRTZBNjk2QkQ1OEYzQkZCMDM3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NzQ3NjM5REJGMjk1MTFFNkE2OTZCRDU4RjNCRkIwMzciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NzQ3NjM5RENGMjk1MTFFNkE2OTZCRDU4RjNCRkIwMzciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JZv/8AAAAXElEQVR42mL4//8/A0AAMYAIgABiAIL/IAAQQIwwHiNIBMQACCCwOJQDxgABBFcCAyxgUUZGmGqIXrhBQAmAAGMCcWAY2SyYGBPUCDCGGQPVDRYDKWCEug+M0fkASaBM3D5406sAAAAASUVORK5CYII=') repeat-x 0 100%;
+            padding-bottom: 5px !important;
+            font-family: SimSun;
+        }
+
+        .txt-point {
+            padding-bottom: 5px !important;
+            background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAFCAYAAAECiO2EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2tpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpFQzc2RTNGQUY3MTQxMUU2OEU3QkY1QzgxRUIzMTU1NCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5MjlBMEM3MEY3NUMxMUU2QTFGOEUyRTFGM0EyNTQzRiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5MjlBMEM2RkY3NUMxMUU2QTFGOEUyRTFGM0EyNTQzRiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpiODE1OGMzOS1iNzE2LTRlZTItYjRmNC1mMjQ2M2Q4NDU3ZTEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RUM3NkUzRkFGNzE0MTFFNjhFN0JGNUM4MUVCMzE1NTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5kHZwmAAAAXElEQVR42mL4//8/AxAEAwQQI5TBABBAcAYMAAQQA1TgO4hGkQUIIFQOI+N/qGpGEA0QQGBtMNNh2mEYYRu6LqwuQAIAAYZVEmYKkosZ0dUw4TAwBIh/QHEINgUAaP4+CYf9IgUAAAAASUVORK5CYII=") repeat-x 0px bottom;
+            /*background-size:auto;*/
+            background-size: 12px auto;
+            font-family: SimSun;
+        }
+
+    </style>
+    <style>
+        @page:-ro-nth(2n-1){
+            @top-right {
+                column-span: all;
+                content: xhtml("<div style='height:10mm;width:190mm;border-bottom:1px dashed #333;line-height:14mm;text-align:right'>河南省淇县第一中学-校本作业</div>");
+            }
+            @bottom-center {
+                content: counter(page);
+                margin-right: 0mm;
+                font-size: 12px;
+            }
+        }
+        @page:-ro-nth(2n){
+            @top-left{
+                column-span: all;
+                content: xhtml("<div style='height:10mm;width:190mm;border-bottom:1px dashed #333;line-height:14mm;'>河南省淇县第一中学-校本作业</div>");
+            }
+            @bottom-center{
+                content: counter(page);
+                margin-right: 0mm;
+                font-size: 12px;
+            }
+        }
+
+        @charset "utf-8";
+
+        li {  list-style: none }
+        body {
+            width: 190mm;
+            height: 267mm;
+            margin-left: 0px;
+            padding-top: 0px;
+            font-family: Times New Roman, SimSun;
+            font-size: 13px;
+        }
+        img {
+            vertical-align: middle;
+        }
+
+        img[name='ht'] {
+            max-width: 100% !important;
+        }
+
+        /* 每道题 */
+        .qitem {
+            padding-bottom: 0px;
+        }
+
+
+        .qitem_content p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            display: block;
+            line-height: 21px;
+        }
+
+        .qitem_content p img {
+            display: inline;
+        }
+
+        @page {
+            size: 245mm 297mm;
+            margin-left: 10mm;
+            margin-bottom: 13mm;
+            margin-top: 17mm;
+            margin-right: 45mm;
+        }
+
+        @page: first {
+            counter-reset: page 0;
+        }
+
+
+
+        .mutilColumn {
+            column-count: 2;
+            column-fill: balance;
+            column-rule-style: dotted;
+            position: relative;
+            column-rule-width: 1px;
+            column-gap: 26px;
+        }
+
+
+        /* ====新加=========== */
+        .exerciseTitle{
+            line-height: 34px;
+            font-size: 14px;
+            font-weight: 600;
+            width:98px;
+            /* border: 1px solid #333; */
+            text-align: center;
+            /* background-color: #cfcfcf; */
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAAAhCAYAAADJXsXPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjQ2ODk1Nzk4MjBBMTFFQUE0MjI4QUYwQTdEMzM2QjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjQ2ODk1N0E4MjBBMTFFQUE0MjI4QUYwQTdEMzM2QjAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGNDY4OTU3NzgyMEExMUVBQTQyMjhBRjBBN0QzMzZCMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGNDY4OTU3ODgyMEExMUVBQTQyMjhBRjBBN0QzMzZCMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PssPolgAAAJMSURBVHja7Jq7ixpRFIfPiIqSKArbDIJWFiEGccFG1hWxsHJTiYqF5gFWQbRwrSy0kI0gkk7IQ0RU7KKNglrogt2KaEhjoYLabLHqRvGB5lrsH5DdMLPF+WCYmXuY5vdxz70zDHU4HABhFw5GwD7chwuPx4NT4gnodDpwOBxFPp//idyO/uVZ6qEdHSX4fD5M85HUajUYDodgtVrvtVpthAzFybHDdsQgJpMJzGYzlEqll9Fo9Go0Gt2Q4TOUwDAymezYkkCpVEIikXiTSqUa8/n8KymdoAQGoSgKVCoVuN1u2G63VCgU+lAul3/vdrt3xzJKYBCyQINerwe73Q7dbveEyPje6XQapKRCCQwjkUjAYrGAwWCAQqFwFo/HbyaTyRUpvUAJDKNQKMDpdAJN07xYLBbIZrO/lsvlBUpg+s2YwwGNRgMulwtms5mCtKifKIElBAIBGI1GWCwW2I6ezQzBCFACghJQAoISUAKCElACghKesQSRSAT1eh1WqxWmwpaESCTyViqVjtLpNLTbbdjv95gO0xKEQmHR4XC8DgQCn6fT6S6TycBgMMCEWFgT7mmavvT7/ac2m+260WhAsViEu7s7TIqFhbmrVqvPw+HwR3K+zefz0Gw2Yb1eY2IM744OXC73m9lsfkVk/ODxeIfjetHr9QB/nWR+i3orFovfu93uc6/X2+v3+5DL5WA8HmN6LLwnXMvl8tNgMHhpsVj+VCoVqFarmOB/gHpka1FsNpsv2Wz2otVqYYpPIJlMUhT2d/xsgRD+CjAAo3HINIQSbZIAAAAASUVORK5CYII=) left no-repeat;
+        }
+        .height2{
+            height: 2px;
+        }
+        .height4{
+            height: 4px;
+        }
+        .height6{
+            height: 6px;
+        }
+        .height8{
+            height: 8px;
+        }
+        .height10{
+            height: 10px;
+        }
+        .height12{
+            height: 12px;
+        }
+        .height14{
+            height: 14px;
+        }
+        .height20{
+            height: 20px;
+        }
+        .option_name{
+            float: left;
+            margin-top: 3px;
+            margin-left: -16px;
+        }
+        .exercise_index{
+            float: left;
+            margin-top: 3px;
+        }
+        .textCenter{
+            text-align: center;
+        }
+	    .clearFix{clear: both; height: 0;}
+        .exerciseTage p{
+            text-align: justify;
+        }
+        .breakAvoid {
+            break-inside: avoid;
+        }
+
+        .icon-box{
+            font-family:微软雅黑; font-weight: bold; line-height: 25px; font-size: 14px;  width: 110px;
+            height: 25px;  background: rgba(217,217,217,1); border-radius: 3px; position: relative;
+            border: 1px solid rgba(44,44,44,1);
+            margin-bottom: 10px;
+        }
+        .icon-box .icon-img{
+            margin-right: 0;  position: absolute; top: 0px;  right: 0px;
+            line-height: 25px; width: 32px; height: 25px;text-align: center; border-radius: 3px;
+            background: rgba(255,255,255,1);
+        }
+    </style>
+
+</head>
+
+<body>
+    {{if arr&&arr.length>0}}
+        {{each arr num index}}
+            <div class="exercise_content">
+                <div class="height14"></div>
+                <div class="textCenter" style="font-size: 20px;font-weight: 700;">（第{{num}}章）三角恒等变换</div>
+                <div class="height14"></div>
+                <div class="textCenter" style="font-size: 18px;font-weight: 700;">课时{{num}}.余弦函数</div>
+                <div class="height20"></div>
+
+                <div class="mutilColumn">
+                    <!-- 题目内容 -->
+                    {{if exercieData&&exercieData.length>0}}
+                        {{each exercieData item index}}
+                            <div class="icon-box">
+                                <div style="color: #333;margin-left: 18px;">基础篇</div>
+                                <div class="icon-img">
+                                    <img style="width: 18px;"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAwCAYAAACBpyPiAAAGyElEQVRoQ+1aCaycVRX+vnNfKV2kZZUKBBJZWkUKxsRQA0lBWWrZAgmyKahIgCiugSBSaJtQQCAs0UC1bGGPMYhYCESoKeAWSZCQsEcIohEKRTYt5xzz1Ttm8vrPm8l03htJuMnkvZe57/7fPfec833n3J/47ygAdjezw0nOy8ytARBA1u+H8cNI/hPA1e5+B4B/jQYhgGVkZGSfzFysDQCYDmCkgh8GaD2zZbQ3MnNJRPwYwNtN4PcopVwF4DMAIjP/DuBVkusyU5ubsEEy6zNnkNwRwFtjgjezH5D8drX4fe6+DMBzdfcTCr71zFLKfpn5Q5KbjAm+lHIPAE1+OSKOA/DQkH1dBjvIzFaQnNLN8n8m+XEAv3X3IwG8PGF+0vwgA7DQzK4huWk38E+T3BnAg+5+7PsV/Cp3P+YD8Bvnd325TSfLa7Ft60dkNqjxbwBPN+TvgYKfZmanA/gagMmDQg7gHxHxFQCPjlpzoOCnm5l44BskBwZeZBgRXwDwx/EEvwmAeWY2r1p+EHpH1n0jIm4G8NfxBK+1tQF9BjVERAHgnfqzfd2Bus2gAPe6zgfgx7LUJABTa5pb14NJJbG3BOAA1jS4yoS5zeRSykGZOZ/k7939LgAqGjqNSaWUBTXVvuru51XV2mn+uLrNR0optwL4VNX+F0bEjdLeDWhGSikHZ+YFJGdn5hqSp7r7nQDe64B+XMFvU0pZDuDzqsIy8y8kF7v7LTV7tDCpQts/IqTLpVpVaTweEScC+NMYJzWu4LX4vFLKJbI+AMvM50guaqs1BXzfiLiE5NwK/FmSZ1erSxoMxW30UIGbHxEXk9yjgnumglsJYM9SyqVtm3ue5HnufltTIT3eJNVkpVJKOSAzL6pugcx8AsB1JA+pNbHc6gWSS939pqYiumFhneyhZra8VlKLI0I19oYFuJm1ipF+9LwCckFmLiO5a+04KPOoAyEfF/Uvi4jrAbzZQ0rVFLHv58zswipHLo+IG0bF0/qluJHgtYZS4WGZeSnJHVoAlVkALI2In3RJpU17mlYluE7hFQCvN9XVgwCvh8+tBfMn28C/GBFfBXB/F1IaDV4EuFm1uuoHEdu7ANbW3/83fxDgdy2lqGElPxfrSnXq6MW8D7v7mQD+0MMG9D+z1PZQ9wCAeGEaSfHHYwB+5e4PqKfUQr+x4D9agavrMDkzXyP5WGbOIblNtdRqd1c9oKKjk5yWe8wtpZyTmfuSnJqZCtB1tYbQ36+TvMPdFQsvbazP71RKWQTgaABTpM8zc0VE/MjMDgZwFslZdQO/dvfvVQuO3oAsPruUciUAtR3/BuAukr9x9zWllO2VfQDsn5mS0VeK+PS8fi0viXAugOMBKLh0tDe5+1IALwKYaWanATijnoCkwMrqQk+OcqEtSilLAJxUye4sd19dg1z+rhiYZWZfl7TQ5iLiiwAe6Qf8pmZ2EoAlJKUUFUy3V8H1fFv0bWVmZwA4tc4Tq97i7t9p81tZfT8zu1ZuR/K77i7d1KRUdymlqPKak5lXRMRF/YBXQf5NkgIhqatAOgfAMw0578O1/j2Z5OZV20hh6nQ0ZpjZUpIqxNX0klHU6G0aU8zszPrcR939hH7AK7jmmNmXRTyVgNSY7TS2VfeBpPqhKyPiCvlrnbydmf1CBCeeULxUMmpq8LKUshDAZZm5NiIW9gNez9UGPlSDsRfm1Fx9xL6a3wra3czs3hoXqzLzqRoPTeCztr0PzEy1TRb0C75Hpu867dNm9rOalRT0CtCx2ur6bpJkeEQc8f8CfkZm/rL2SXWqnUaLAF+JiOXDBq97sLvVVokIdeRW9XidpHz/1rDB72Rm95DUBZ7SpMrJTuXhBqcxbPAqKVcA+GzlAMmI17pGSp0wbPDK3aeQPD8z5cdfAiB27TTEK1tVYuxbHvRqnF7mzTazW2s1JsL7PgClzPY6V9J4ZilF/dJj3F1Xm6vbLT+sax31gU7IzEU136tr/FN3f7haWN9/QpI7M+VeERHSVKsE/nGSH5PQcfejhnSts5mZnQzgNJLbZ6aITISm4JWrTCU5rcriu939fMliUe69AOar3qz98t8N6Spz+sjIiF4dOC4z964yWzlfxLWW5CMAfu7uKmzWtwxleR3Xt6q0lWy9AMALPVQ+vfhztzmtVresrOJDf8+UYAOwRatOqBlIp6FSUDl+/dBk9VjUWtBuXXqZpCoVSd0Wo3UD0e/3CkQBv742ozZ4OWKshVsvTsht2l+cmMhr+zfrRXFjb6YbeH2voNjLzBTF6v5uV19j6deivf6fWoWSx2rWqkWim5Kex38AhWJGM5bePKwAAAAASUVORK5CYII=" />
+                                </div>
+                            </div>
+                            <div>
+                                <span class="exercise_index">{{index+1}}.</span>
+                                <div style="padding-left:16px;">{{include "./exercise_content.html" item }}</div>
+                                <div class="height14"></div>
+                            </div>
+                        {{/each}}
+                    {{/if}}
+                </div>
+                <div class="height14"></div>
+            </div>
+        {{/each}}
+    {{/if}}
+</body>
+
+</html>
